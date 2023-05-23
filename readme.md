@@ -7,7 +7,7 @@ Find more themes: https://linkstack.org/themes
 *	Theme Author: JulianPrieber
 *	Theme Author URI: https://github.com/JulianPrieber
 *	Theme License: MIT
-*	Source code: https://github.com/LinkStackOrg/Cloudy-Storm
+*	Source code: https://github.com/LinkStackOrg/Cloudy-Storm-1k-edition
 
 ### Used assets:
 * Built using:
