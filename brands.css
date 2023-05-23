@@ -1,0 +1,256 @@
+
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+
+- Rounded user avatars
+- Buttons
+- Brand Styles
+
+*/
+
+
+/* Rounded avatars
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Disable this if you don't want rounded avatars for users */
+.rounded-avatar {
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 0px 3px #ffffff; 
+  box-shadow: 0px 0px 0px 3px #ffffff;
+  background-color: #ffffff !important;
+  width: 150px;
+  height: 150px;
+}
+
+.social-icon {
+  font-size: 32px;
+  padding: 10px;
+}
+.social-icon-div {
+  padding-bottom: 30px;
+}
+.social-icon{color:#fff;}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+:root {
+  /* violet */
+  --primary-color: 111, 76, 255;
+  
+  /* white */
+  --text-color: 256, 256, 256;
+}
+
+.button {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  color: rgba(var(--text-color));
+  width: 400px !important;
+  line-height: 52px;
+  z-index: 2000;
+}
+
+.button-entrance {
+  height: 52px !important;
+  margin-bottom: 20px !important;
+}
+
+.button-entrance {
+  --clr: 260;
+  --shadows: 0%;
+  --shadowl: 0%;
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 5em;
+  background: linear-gradient(
+      0deg,
+      hsla(var(--clr), 100%, 70%) 0%,
+      hsla(var(--clr), 100%, 65%) 5%,
+      hsla(var(--clr), 80%, 35%) 15%,
+      hsla(var(--clr), 10%, 0%) 40%,
+      hsla(var(--clr), 25%, 12%) 90%
+  );
+  background-size: 200% 300%;
+  background-position: 0% 0%;
+  box-shadow: inset 0 0 2px hsla(var(--clr), 30%, 20%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0px);
+
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+
+  box-shadow: 0 -0.5em 0.5em transparent, 0 0.5em 0.5em transparent, 0 0.5em 0.5em transparent, 0 0.5em 0.5em transparent,
+      0 0.25em 0.3em -0.2em hsla(var(--clr), 0%, 0%, 0.5),
+      0 0.35em 0.75em hsla(var(--clr), 0%, 0%, 0.75);
+}
+
+.button-entrance::before,
+.button-entrance::after {
+  --gradientPos: 50% 100%;
+  content: " ";
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  transition: inherit;
+}
+
+.button-entrance:before {
+  inset: 0;
+  position: absolute;
+  transform: translate3d(0, 0, 0.01px);
+  border-radius: inherit;
+
+  background-image: var(--glitter), var(--glitter),
+      linear-gradient(180deg, black 0%, white 80%);
+  background-size: 300px 170px, 280px 130px, 200% 200%;
+  background-blend-mode: multiply, multiply, overlay;
+  background-position: 0px 0px, 0px 0px, var(--gradientPos);
+  background-repeat: repeat;
+
+  mix-blend-mode: color-dodge;
+  filter: brightness(2) contrast(.75);
+  animation: bubble 20s linear infinite;
+  animation-play-state: paused;
+  opacity: 0.5;
+  box-shadow: inset 0 -8px 10px -7px hsla(var(--clr), 70%, 80%, 0.75);
+}
+
+.button-entrance:after {
+  background-image: radial-gradient(
+          ellipse at center 70%,
+          hsla(var(--clr), 100%, 99%, 0.8) 5%,
+          hsla(var(--clr), 90%, 80%, 1) 20%,
+          transparent 50%,
+          transparent 200%
+      ),
+      linear-gradient(
+          90deg,
+          hsla(var(--clr), 80%, 10%, 1) -10%,
+          transparent 25%,
+          transparent 75%,
+          hsla(var(--clr), 80%, 10%, 1) 110%
+      );
+  box-shadow: inset 0 0.25em 0.75em rgba(0, 0, 0, 1),
+      inset 0 -0.05em 0.2em rgba(255, 255, 255, 0.4),
+      inset 0 -1px 3px hsla(var(--clr), 80%, 50%, 0.75);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: 180% 80%, cover;
+  background-position: center 220%;
+  mix-blend-mode: hard-light;
+  filter: blur(5px);
+  opacity: 0;
+}
+
+.button-entrance:hover,
+.button-entrance.over {
+  --shadows: 90%;
+  --shadowl: 80%;
+  background-position: 100% 100%;
+
+  transition: all 0.2s cubic-bezier(0.17, 0.84, 0.44, 1);
+
+  box-shadow: 0 -0.2em 1.5em hsla(var(--clr), 90%, 50%, 0.3),
+      0 0.5em 2em hsla(var(--clr), 90%, 70%, 0.55),
+      0 0.25em 0.3em -0.2em hsla(var(--clr), 0%, 0%, 1),
+      0 0.35em 0.75em hsla(var(--clr), 0%, 0%, 1),
+      0 0.25em 0.5em -0.3em hsl(var(--clr), 30%, 99%, 1),
+      0 0.25em 0.5em hsla(var(--clr), 20%, 30%, 0.35),
+      inset 0 -2px 5px -2px rgba(255, 255, 255, 0.5);
+}
+
+.button-entrance.over {
+  transition-duration: 2s;
+}
+
+.button-entrance:hover:before,
+.button-entrance.over:before {
+  --gradientPos: 50% 50%;
+  animation-play-state: running;
+  filter: brightness(2) contrast(1);
+  box-shadow: inset 0 -5px 10px -4px hsla(var(--clr), 70%, 80%, 0.3);
+  opacity: .8;
+}
+
+.button-entrance:hover:after,
+.button-entrance.over:after {
+  opacity: .8;
+  transform: translateY(0px);
+}
+
+.button-entrance .button {
+  grid-column: 1;
+  grid-row: 1;
+  background-image: linear-gradient(
+      rgb(219, 224, 232) 0%,
+      rgb(214, 222, 226) 19%,
+      rgb(179, 191, 203) 30%,
+      rgb(201, 209, 216) 43%,
+      hsl(var(--clr), 70%, 70%, 1) 50%,
+      hsl(var(--clr), 50%, 85%, 1) 52%,
+      rgb(255, 255, 255) 100%
+  );
+  background-size: 1em 3.45em;
+  color: rgb(214, 222, 226);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  filter: drop-shadow(0 0 0.05em black) drop-shadow(0 0.025em 0.05em black);
+  transition-timing-function: inherit;
+  transition-duration: inherit;
+  transition-delay: 0s;
+  transform: translateY(0);
+}
+
+.button-entrance:active {
+  transform: translateY(0.075em);
+  box-shadow: 0 -0.2em 1.5em hsla(var(--clr), 90%, 50%, 0.4),
+  0 0.5em 2em hsla(var(--clr), 90%, 70%, 0.65),
+  0 0.15em 0.3em -0.2em hsla(var(--clr), 0%, 0%, 1),
+  0 0.25em 0.75em hsla(var(--clr), 0%, 0%, 1),
+  0 0.25em 0.5em -0.3em hsl(var(--clr), 30%, 99%, 1),
+  0 0.25em 0.5em hsla(var(--clr), 20%, 30%, 0.45),
+  inset 0 -2px 5px -2px rgba(255, 255, 255, 0.65);
+  transition-duration: 0.1s;
+}
+
+.button-entrance:active:before,
+.button-entrance:active:after {
+  opacity: 1;
+  filter: brightness(3) contrast(.75);
+  animation-duration: 8s;
+}
+.button-entrance:active:after {
+  filter: brightness(1.35) contrast(.8) blur(5px);
+}
+
+@keyframes bubble {
+  0% {
+      background-position: 0px 340px, 0px 130px, var(--gradientPos);
+  }
+  100% {
+      background-position: 0px 0px, 0px 0px, var(--gradientPos);
+  }
+}
+
+/* Brand Icons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.icon {
+  padding: 0px 8px 3.5px 0px;
+  /* position: absolute;
+  left: 20px;
+  top: 15px; */
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
