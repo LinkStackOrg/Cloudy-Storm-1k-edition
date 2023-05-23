@@ -1,7 +1,7 @@
 # A LinkStack Theme
 Find more themes: https://linkstack.org/themes
                                                                                                                                                                          
-*	Theme Name: Cloudy Storm
+*	Theme Name: Cloudy Storm 1k Edition
 *	Theme Version: 1.0
 *	Theme Date: 2022-05-22
 *	Theme Author: JulianPrieber
